@@ -9,6 +9,9 @@ const MODE_STRONG_ATTACK = 'STRONG_ATTACK';
 const enteredValue = prompt('Maximum life for you and the monster','100');          // 100 is default
 
 let chosenMaxLife = parseInt(enteredValue);
+let battleLog = [];
+
+
 
 if (isNaN(chosenMaxLife) || chosenMaxLife <= 0 ) {
   chosenMaxLife = 100;
@@ -19,6 +22,8 @@ let currentPlayerHealth = chosenMaxLife;
 let hasBonusLife = true;
 
 adjustHealthBars(chosenMaxLife);
+
+function writeToLog(event) {}
 
 function reset() {
   currentMonsterHealth = chosenMaxLife;
